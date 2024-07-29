@@ -5,7 +5,12 @@ export default function TodoList({ toDos, setTodos }) {
   return (
     <div className={style.list}>
       {toDos.map((item) => (
-        <TodoItems key={item} item={item} toDos={toDos} setTodos={setTodos} />
+        <TodoItems
+          key={item.name}
+          item={item}
+          toDos={toDos}
+          setTodos={setTodos}
+        />
       ))}
     </div>
   );
